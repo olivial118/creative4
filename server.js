@@ -1,4 +1,4 @@
-t express = require('express');
+const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -26,6 +26,7 @@ app.put('/api/items/:id', (req, res) => {
   let itemsMap = items.map(item => { return item.id; });
   let index = itemsMap.indexOf(id);
   let item = items[index];
+  item.priority = req.body.priority;
   item.completed = req.body.completed;
   item.text = req.body.text;
   // handle drag and drop re-ordering
@@ -49,4 +50,5 @@ app.delete('/api/items/:id', (req, res) => {
 });
 
 app.listen(3000, () => console.log('Server listening on port 3000!'))
+
 
