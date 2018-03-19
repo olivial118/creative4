@@ -1,0 +1,35 @@
+<!DOCTYPE>
+	<html>
+	  <head>
+	    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+	    <link rel="stylesheet" href="/styles.css"/>
+	    <title>chat a Line</title>
+	  </head>
+	  <body>
+	    <div id="app">
+	      <h1>Chat a Line!</h1> <br><br>
+	      <form v-on:submit.prevent="addItem">
+          <label> Name: </label>
+    		<input type="text" v-model="text" placeholder="Your name" id='name'>
+        <label>Chat:</label>
+    		<input type="text" v-model="priority" placeholder="What's on your mind?" id='chat'> <br> <br>
+		    <button class="button" type="submit">Add a Chat</button>
+	      </form>
+      		<button class="button" v-on:click="showCompleted()">Show Selected</button>
+      		<button class="button" v-on:click="deleteCompleted()">Delete Selected</button>
+          <button class="button" v-on:click="showAll()">Show All</button>
+
+	      <ul>
+        	<li v-for="item in filteredItems"  draggable="true" v-on:dragstart="dragItem(item)" v-on:dragover.prevent v-on:drop="dropItem(item)">
+        	  <input type="checkbox" v-model="item.completed" v-on:click="completeItem(item)" /><label v-bind:class="{ completed: item.completed }">{{ item.text }}{{item.priority}}</label><button v-on:click="deleteItem(item)" class="delete">X</button>
+        	</li>
+	      </ul>
+	    </div>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+	    <script src="/script.js"></script>
+	  </body>
+	  <footer>
+	    <p><a href="https://github.com/BYU-CS260-Winter-2018/lab-4-olivial118">Github Repository</p>
+	</footer>
+	</html>
