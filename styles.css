@@ -1,0 +1,89 @@
+h1 {
+  text-align: center;
+}
+body {
+    font-family: 'Arvo';
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background-image: url("https://post-phinf.pstatic.net/MjAxNzA2MjhfMTQw/MDAxNDk4NjU2MzY1ODYw.xfxbU2-DZu-LcYMzxLZc-SgvmAvBY3WDQQLGjGP3CJog.F9Hufm5_CpSfnARL6rDl1sV-iig6wKSG5FDbxSRicKIg.JPEG/%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B450.jpg?type=w1200");
+    text-align: center;
+}
+
+#letter {
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+/* List */
+
+ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 160px;
+}
+
+li {
+    background: #E1D2F2;
+    width: 900px;
+    min-height: 30px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    display: flex;
+}
+
+.delete {
+    display: none;
+    margin-left: auto;
+}
+
+li:hover .delete {
+    display: block;
+}
+
+label {
+    width: 400px;
+    text-align: left;
+}
+
+/* Form */
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+input[type=text] {
+    font-size: 1em;
+    background-color: #E1D2F2;
+    color: black;
+}
+
+button {
+    font-family: 'Arvo';
+    font-size: 1em;
+}
+
+.form {
+  text-align: center;
+}
+
+#name {
+  width: 20%;
+  padding: 5px 5px;
+}
+
+#chat {
+  width: 60%;
+  padding: 5px 5px;
+}
+/* Controls */
+
+.controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+    background-color: #E1D2F2;
+}
