@@ -16,8 +16,7 @@
 		    <button class="button" type="submit">Add a Chat</button>
 	      </form>
       		<button class="button" v-on:click="showCompleted()">Show Selected</button>
-      		<button class="button" v-on:click="deleteCompleted()">Delete Selected</button>
-          <button class="button" v-on:click="showAll()">Show All</button>
+         	<button class="button" v-on:click="showAll()">Show All</button>
 
 	      <ul>
         	<li v-for="item in filteredItems"  draggable="true" v-on:dragstart="dragItem(item)" v-on:dragover.prevent v-on:drop="dropItem(item)">
